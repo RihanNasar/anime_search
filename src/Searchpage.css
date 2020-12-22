@@ -1,0 +1,96 @@
+html {
+    scroll-behavior: smooth;
+  }
+body {
+    background: #34495e;
+    display: flex;
+    color: azure;
+    justify-content: center;
+    align-items: center;
+  }
+img{
+    width: 100%;
+    border-radius: 6px;
+    
+    height: 100%;
+    object-fit: contain;
+  
+  }
+  .search_row_upper {
+    width: 150px;
+    min-height: 170px;
+   
+  }
+  
+  .search_row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+  }
+  .search_row::-webkit-scrollbar {
+    display: none;
+  }
+  .search_row_lower{
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .2rem;
+    width: 140px;
+    
+    /* background: #89729E; */
+  
+  }
+  .search_rows{
+    /* background: #8e44ad; */
+    margin-left: 10px;
+    text-decoration: none;
+    height: 100%;
+    margin-top: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(68, 17, 17, 0.973);
+         /* Para a imagem nao criar uma borda pontuda na parte superior do box */
+      /* Relativo para ser referencia ao .movie-overview */
+   
+  }
+  
+  .tag.green {
+    color: rgb(5, 184, 5);
+  }
+  
+  .tag.orange {
+    color: orange;
+  }
+  
+  .tag.red {
+    color: red;
+  }
+  @media (max-width: 909px){
+    .search_row{
+      width: auto;
+      height: auto;
+      
+    }
+    .search_rows{
+      width: auto;
+      margin: 3px;
+      height: auto;
+    }
+    img {
+        width: auto;
+        height: auto;
+    }
+    .search_row_upper{
+      width: auto;
+      height: auto;
+    }
+    .search_row_lower{
+      width: auto;
+      padding: auto;
+      height: auto;
+    }
+  }

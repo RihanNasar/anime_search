@@ -1,38 +1,107 @@
-.App {
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #34495e;
+  display: flex;
+  color: azure;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  margin-top: 20px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2{
+  margin-top: 20px;
+  
 }
+img{
+  width: 100%;
+  border-radius: 6px;
+  height: 100%;
+  object-fit: contain;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.row_upper {
+  width: 150px;
+ 
+}
+h5{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+a {
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.row {
+  margin-top: 20px;
+  display: flex;
+  
+  flex-wrap: wrap;
+  
+  width: 700px;
+  height: auto;
+}
+.row::-webkit-scrollbar {
+  display: none;
+}
+.row_lower{
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .2rem;
+  width: 140px;
+  /* background: #89729E; */
+
+}
+.rows{
+  /* background: #8e44ad; */
+  margin-left: 10px;
+  text-decoration: none;
+  height: 100%;
+  margin-top: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+       /* Para a imagem nao criar uma borda pontuda na parte superior do box */
+    /* Relativo para ser referencia ao .movie-overview */
+ 
+}
+
+.tag.green {
+  color: rgb(126, 202, 126);
+}
+
+.tag.orange {
+  color: orange;
+}
+
+.tag.red {
+  color: red;
+}
+@media (max-width: 909px){
+  .row{
+    width: auto;
+    height: auto;
   }
-  to {
-    transform: rotate(360deg);
+  img{
+    width: auto;
+    height: auto;
+  }
+  .rows{
+    width: auto;
+    height: auto;
+    margin: 10px;
+  }
+  .row_upper{
+    width: auto;
+    height: 50;
+  }
+  .row_lower{
+    width: auto;
+    padding: auto;
+    height: auto;
   }
 }
