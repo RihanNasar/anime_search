@@ -1,5 +1,6 @@
 import React,{ useState, useEffect } from 'react'
 import './App.css'
+import {Link} from 'react-router-dom'
 import instance from './axios.js'
 
 function Row({title, fetchUrl}) {
@@ -29,7 +30,8 @@ function Row({title, fetchUrl}) {
             <div className="row">
              {animes.map((anime) =>(
               
-               <a href={anime.url}><div className="rows">
+              <Link to={`/anime/${anime.mal_id}`}>
+                <div className="rows">
                 
                     <div className="row_upper">
                         <img src={anime.image_url} alt={anime.title}/>
@@ -38,7 +40,8 @@ function Row({title, fetchUrl}) {
                         <h5>{anime.title}</h5>
                         <h4 className={`tag ${setVoteClass(anime.score)}`}>{anime.score}</h4>
                     </div>
-              </div></a>
+                </div>
+              </Link>
              ))}; 
             </div>
            

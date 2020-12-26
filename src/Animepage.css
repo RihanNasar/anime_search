@@ -1,0 +1,64 @@
+.anime_main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.anime_img {
+    width: 300px;
+    height: 300px;
+}
+.genre {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+    
+    margin: 50px;
+}
+.upper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 20px;
+}
+p {
+    justify-self: center;
+    margin: 40px;
+}
+.video {
+    width : 504px;
+    height : 304px
+}
+@media (max-width: 480px) {
+    .genres {
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    .genre {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+        
+        margin: 50px;
+    }
+    span {
+        
+        margin-left: 3px;
+    }
+    p {
+        margin: 10px 70px 10px 70px;
+    }
+    .video {
+        display: none;
+    }
+}

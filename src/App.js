@@ -7,6 +7,7 @@ import Row from './Row.js';
 import Mainpage from './Mainpage'
 
 import Searchpage from './Searchpage'
+import Animepage from './Animepage'
 function App() {
   return (
     
@@ -18,7 +19,8 @@ function App() {
         <Switch>
           
           <Route exact path="/"><Mainpage /></Route>
-          <Route path="/search/:id" component={Searchpage} />
+          <Route exact path="/search/:id" component={Searchpage} />
+          <Route path="/anime/:id" component={Animepage} />
         </Switch>
       
       </Router>

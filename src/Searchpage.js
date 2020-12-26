@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from 'react'
 import './Searchpage.css'
+import {Link} from 'react-router-dom'
 function Searchpage({match}) {
     
     const [anime , setAnime] = useState([])
@@ -29,7 +30,7 @@ function Searchpage({match}) {
             
             {anime.map(each_anime => (
               
-                <a href={each_anime.url}><div key={each_anime.mal_id} className="search_rows">
+                <Link to={`/anime/${each_anime.mal_id}`}><div key={each_anime.mal_id} className="search_rows">
                 
                     <div className="search_row_upper">
                         <img src={each_anime.image_url} alt={each_anime.title}/>
@@ -38,7 +39,7 @@ function Searchpage({match}) {
                         <h5>{each_anime.title}</h5>
                         <h4 className={`tag ${setVoteClass(each_anime.score)}`}>{each_anime.score}</h4>
                     </div>
-                </div></a>
+                </div></Link>
         
             ))}
         </div>
